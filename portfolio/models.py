@@ -15,7 +15,7 @@ class Tecnologias(models.Model):
 class Projetos(models.Model):
     nome_projeto = models.CharField(max_length=100, blank=False, null=False, verbose_name='Projeto')
     descricao = models.TextField(max_length=1000, blank=False, null=False, verbose_name='Descrição')
-    tecnologias = models.ManyToManyField(Tecnologias, field_name='tecnologia', to='tecnologia', on_delete=models.DO_NOTHING)
+    tecnologias = models.ManyToManyField(Tecnologias, verbose_name='Tecnologias')
     endereco = models.CharField(max_length=200, blank=True, null=True, verbose_name='Enderço do Site')
     codigo = models.CharField(max_length=200, blank=True, null=True, verbose_name='Endereço do Codigo')
     data_cadastro = models.DateField(auto_now_add=True)

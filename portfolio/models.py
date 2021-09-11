@@ -6,6 +6,8 @@ class Tecnologias(models.Model):
 
     class Meta:
         db_table = 'tecnolgias'
+        verbose_name = 'Tecnologia'
+        verbose_name_plural = 'Tecnologias'
 
     def __str__(self):
         return self.tecnologia
@@ -24,6 +26,8 @@ class Projetos(models.Model):
 
     class Meta:
         db_table = 'projetos'
+        verbose_name = 'Projeto'
+        verbose_name_plural = 'Projetos'
 
     def __str__(self):
         return self.nome_projeto , str(self.tecnologias)
